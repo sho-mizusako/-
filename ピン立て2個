@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google マップのピン</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY"></script>
+    <script>
+      function initMap() {
+        var map = new google.maps.Map(document.getElementById("map"), {
+          center: { lat: 37.7749, lng: -122.4194 }, // マップの初期位置
+          zoom: 12, // ズームレベル
+        });
+
+        // マーカーを追加
+        var marker = new google.maps.Marker({
+          position: { lat: 37.7749, lng: -122.4194 }, // ピンの位置
+          map: map,
+          title: "ピンのタイトル",
+        });
+      }
+    </script>
+  </head>
+  <body onload="initMap()">
+    <div id="map" style="height: 400px; width: 100%;"></div>
+  </body>
+</html>
